@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css Grid tutorial</title>
+	<style type="text/css">
+		.continer{
+			width: 300px;
+			margin: 50px auto 0;
+			background-color: gray;
+
+			display: grid;
+			grid-template-columns: repeat(2,150px);
+			grid-template-rows: repeat(2,150px);
+		}
+		.item{
+			max-width: 150px;
+		}
+		.item-1{background-color: yellow;
+		         grid-column: 1/span2;
+				  grid-row: 1/span2;
+				align-self: start;
+			 z-index: 3;}
+		.item-2{background-color: green;
+			      grid-column: 1/span2;
+				  grid-row: 1/span2;
+				align-self: center;
+			   justify-self: center;
+			z-index: 1;}
+		.item-3{background-color: blue;
+			   grid-column: 1/span2;
+				  grid-row: 1/span2;
+				align-self: end;
+			   justify-self: end;
+			  z-index: 2;}
+	</style>
+</head>
+<body>
+	<div class="continer">
+		<div class=" item item-1">one Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sequi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sequi</div>
+		<div class=" item item-2">two Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, error.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sequi</div>
+		<div class=" item item-3">three Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, fugaLorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sequi.</div>
+	</div>
+</body>
+</html>
